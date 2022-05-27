@@ -22,7 +22,7 @@ For example, `./prompt_data/MIT_M/prompt_MIT_M/mit_m.10_shot.json` is the path f
     - Then you need to:
         - set `test_path` in `./scripts/mit/mit_m.sh` as `./prompt_data/MIT_M/prompt_MIT_M/` (the `/` at the end is needed).
         - set `test_file` in `./scripts/mit/mit_m.sh` as `mit_m.10_shot`.
-        - set 'data_set' in `./scripts/mit/mit_m.sh` as 'mit'
+        - set `data_set` in `./scripts/mit/mit_m.sh` as `mit`
         - mkdir pred
         - mkdir model_selection
 
