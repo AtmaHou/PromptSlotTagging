@@ -56,7 +56,7 @@ source ./scripts/mit/mit_r.sh
 ```bash
 source ./scripts/snips/snips.sh
 ```  
-
+Note: Each time re-run a setting you need to clear the corresponding pred path manaully.
 ## Project Architecture
 
 
