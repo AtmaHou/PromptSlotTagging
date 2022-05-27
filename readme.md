@@ -13,6 +13,9 @@ transformers >= 4.10.2
 
 ### Step1: Prepare data and scripts
 - Download prompted few-shot data at [download mit data]().
+	-You can also generate data using `original_data` and `utils`:
+		-train data for snips using `preprocessor.py`,other data \(dev and test data\) using `rechecker_preprocessor.py`
+		-change the path in `__main__`
 
 - For MIT data(In-domain): 
 For example, `./prompt_data/MIT_M/prompt_MIT_M/mit_m.10_shot.json` is the path for prompted 10-shot MIT_movie data. 
