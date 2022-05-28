@@ -106,6 +106,7 @@ Note: Each time re-run a setting you need to clear the corresponding pred path m
 
 
 - `inverse`:
+    - `original_data`: original data to construct prompt data 
     - `scripts`: running scripts.
         - `mit`: running scripts for mit (In-domain).
             - `mit_m.sh`: running script for MIT-movie
@@ -113,6 +114,7 @@ Note: Each time re-run a setting you need to clear the corresponding pred path m
             - `mit_r.sh`: running script for MIT-restaurant
         - `snips`: running scripts for SNIPS (Meta-Source Transfer).
             -  `snips.sh`: running script for SNIPS
+    - `utils`: tools to construct prompt data 
     - `train.py`: the entry file of the whole project.
     - `opt.py`: the definition and default settings of the arguments.
     - `model.py`: modified GPT2 modeling for our generation.
