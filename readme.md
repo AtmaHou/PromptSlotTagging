@@ -105,7 +105,7 @@ Note: Each time re-run a setting you need to clear the corresponding pred path m
 ## Project Architecture
 
 
-- `inverse`:
+- `PromptSlotTagging`:
     - `original_data`: original data to construct prompt data 
     - `scripts`: running scripts.
         - `mit`: running scripts for mit (In-domain).
