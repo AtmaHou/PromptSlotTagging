@@ -13,10 +13,56 @@ transformers >= 4.10.2
 
 ### Step1: Prepare data and scripts
 - Download prompted few-shot data at [download mit data](https://github.com/AtmaHou/PromptSlotTagging/releases/download/prompt_data/prompt_data.zip).
-	-You can also generate data using `original_data` and `utils`:
-		-train data for snips using `preprocessor.py`,other data \(dev and test data\) using `rechecker_preprocessor.py`
-		-change the path in `__main__`
-
+- You can also generate data using `original_data` and `utils`:
+    - train data for snips using `preprocessor.py`,other data \(dev and test data\) using `rechecker_preprocessor.py`
+    - change the path in `__main__`
+- few-shot original data example：
+```json
+{
+  "domain_name": [
+    {  // episode
+      "support": {  // support set
+        "seq_ins": [["we", "are", "friends", "."], ["how", "are", "you", "?"]],  // input sequence
+        "seq_outs": [["O", "O", "O", "O"], ["O", "O", "O", "O"]]  // output sequence in sequence labeling task
+      },
+      "query": {  // query set
+        "seq_ins": [["we", "are", "friends", "."], ["how", "are", "you", "?"]],
+        "seq_outs": [["O", "O", "O", "O"], ["O", "O", "O", "O"]]
+      }
+    },
+    ...
+  ],
+  ...
+}
+```
+- few-shot original data example：
+```json
+{
+  "domain_name": [
+    {  // episode
+      "domain": "domain_name"
+      "support": {  // support set
+        "original_seq_in": [["we", "are", "friends", "."], ["how", "are", "you", "?"]],  // input sequence
+        "original_seq_out": [["O", "O", "O", "O"], ["O", "O", "O", "O"]]  // output sequence in sequence labeling task
+	"prompt_seq_in": 
+	"prompt_seq_out": 
+	"checker_prompt_in":
+	"checker_prompt_out":
+      },
+      "query": {  // query set
+        "original_seq_in": [["we", "are", "friends", "."], ["how", "are", "you", "?"]],  // input sequence
+        "original_seq_out": [["O", "O", "O", "O"], ["O", "O", "O", "O"]]  // output sequence in sequence labeling task
+	"prompt_seq_in": 
+	"prompt_seq_out": 
+	"checker_prompt_in":
+	"checker_prompt_out":
+      }
+    },
+    ...
+  ],
+  ...
+}
+```
 - For MIT data(In-domain): 
 For example, `./prompt_data/MIT_M/prompt_MIT_M/mit_m.10_shot.json` is the path for prompted 10-shot MIT_movie data. 
     - Then you need to:
