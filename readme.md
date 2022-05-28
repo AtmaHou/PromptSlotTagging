@@ -42,20 +42,19 @@ transformers >= 4.10.2
     {  // episode
       "domain": "domain_name"
       "support": {  // support set
-        "original_seq_in": [["we", "are", "friends", "."], ["how", "are", "you", "?"]],  // input sequence
-        "original_seq_out": [["O", "O", "O", "O"], ["O", "O", "O", "O"]]  // output sequence in sequence labeling task
-	"prompt_seq_in": 
-	"prompt_seq_out": 
-	"checker_prompt_in":
-	"checker_prompt_out":
+        "original_seq_in": [["Jack", "is", "my", "friend", "."], ["how", "are", "you", "?"]],  // input sequence
+        "original_seq_out": [["B-name", "O", "O", "O", "O"], ["O", "O", "O", "O"]],  // output sequence in sequence labeling task
+	"prompt_seq_in": [["'", "Jack", "is", "my", "friend", ".", "'", "name", "refers", "to"]...],
+	"prompt_seq_out": [["'", "Jack", "is", "my", "friend", ".", "'", "name", "refers", "to", "Jack"]...],
+	"checker_prompt_in": [["'", "Jack", "is", "my", "friend", ".", "'", "name", "refers", "to", "Jack", ".", "loaction", "refers", "to"]...],
+	"checker_prompt_out": [["'", "Jack", "is", "my", "friend", ".", "'", "name", "refers", "to", "Jack", ".", "loaction", "refers", "to", "none"]...]
       },
       "query": {  // query set
-        "original_seq_in": [["we", "are", "friends", "."], ["how", "are", "you", "?"]],  // input sequence
-        "original_seq_out": [["O", "O", "O", "O"], ["O", "O", "O", "O"]]  // output sequence in sequence labeling task
-	"prompt_seq_in": 
-	"prompt_seq_out": 
-	"checker_prompt_in":
-	"checker_prompt_out":
+      	"domain": "domain_name",
+        "original_seq_in": [["Jack", "is", "my", "friend", "."], ["how", "are", "you", "?"]],  // input sequence
+        "original_seq_out": [["O", "O", "O", "O"], ["O", "O", "O", "O"]],  // output sequence in sequence labeling task
+	"prompt_seq_in": [["'", "Jack", "is", "my", "friend", ".", "'", "name", "refers", "to"]...],
+	"prompt_seq_out": [["'", "Jack", "is", "my", "friend", ".", "'", "name", "refers", "to", "Jack"]...]
       }
     },
     ...
