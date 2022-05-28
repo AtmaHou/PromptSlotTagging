@@ -35,7 +35,7 @@ transformers >= 4.10.2
   ...
 }
 ```
-- few-shot original data example：
+- few-shot prompted data example：
 ```json
 {
   "domain_name": [
