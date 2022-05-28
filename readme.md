@@ -12,7 +12,7 @@ transformers >= 4.10.2
 ```
 
 ### Step1: Prepare data and scripts
-- Download prompted few-shot data at [download mit data](https://github.com/AtmaHou/PromptSlotTagging/releases/download/prompt_data/prompt_data.zip).
+- Download prompted few-shot data at [download data](https://github.com/AtmaHou/PromptSlotTagging/releases/download/prompt_data/prompt_data.zip).
 - You can also generate data using `original_data` and `utils`:
     - train data for snips using `preprocessor.py`,other data \(dev and test data\) using `rechecker_preprocessor.py`
     - change the path in `__main__`
