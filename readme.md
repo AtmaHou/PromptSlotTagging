@@ -81,6 +81,8 @@ For example, `./prompt_data/snips/prompt_snips/snips_train_2.json`, `./prompt_da
         - set `data_set` in `./scripts/snips/snips.sh` as `snips`
         - mkdir pred
         - mkdir model_selection
+	- mkdir model
+	- mkdir ft_model
 
 ### Step2: Train and test the main model
 
